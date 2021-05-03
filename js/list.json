@@ -1,12 +1,24 @@
 {
     "links": [
       {
-        "label": "Week 1",
+        "label": "Week 1 Notes",
         "url": "notes/week1/index.html"
       },
       {
-        "label": "Week 2",
+        "label": "Week 2 Notes",
         "url": "notes/week2/index.html"
+      },
+      {
+        "label": "Week 2 Team",
+        "url": "team/week2.html"
+      },
+      {
+        "label": "Week 3",
+        "url": "notes/week3/index.html"
+      },
+      {
+        "label": "Week 3 Team",
+        "url": "team/week3.html"
       }
     ]
   }
