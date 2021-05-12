@@ -11,18 +11,25 @@
     <div id="error"></div>
     <form id="form" action="/" method="GET">
     <div>
-        <label for="name">Name</label>
+        <label>Name
         <input id="name" name="name" type="text" required>
+        </label>
     </div>
     <div>    
-        <label for="password">Password</label>
+        <label>Password
         <input id="password" name="password" type="password">
+        </label>
     </div>
     <div>    
-        <label for="password1">Re-Enter Password</label>
+        <label>Re-Enter Password
         <input id="password1" name="password1" type="password">
+        </label>
     </div>
     <button type="submit">Register</button>
     </form>
+
+    <p> Both &lt;button type="submit"&gt; and &lt;input type="submit"&gt; display as buttons and cause the form data to be submitted to the server.</p>
+
+    <p>The difference is that &lt;button&gt; can have content, whereas &lt;input&gt;cannot (it is a null element). While the button-text of an &lt;input&gt; can be specified, you cannot add markup to the text or insert a picture. So &lt;button&gt; has a wider array of display options.</p>
 </body>
 </html>

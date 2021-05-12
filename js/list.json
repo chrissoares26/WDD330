@@ -27,6 +27,19 @@
       {
         "label": "Week 3 Team 1",
         "url": "team/week3-1.html"
+      },
+      {
+        "label": "Week 4 Notes",
+        "url": "notes/week4/index.html"
+      },
+      {
+        "label": "Week 4 Team",
+        "url": "team/week4.html"
+      }
+      ,
+      {
+        "label": "Week 4 Practice",
+        "url": "notes/week4/activity.html"
       }
     ]
   }
