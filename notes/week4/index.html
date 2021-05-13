@@ -1,127 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Tic Tac Toe</title>
-    <style>
-      /* styles for the table based board */
-      .board {
-        width: 320px;
-        height: 320px;
-      }
-      .board td,
-      .board tr {
-        width: 33.3%;
-        height: 33.3%;
-      }
-      .board td {
-        border-right: 1px solid;
-        border-bottom: 1px solid;
-        font-size: 5em;
-        text-align: center;
-      }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Notes</title>
+    <meta name="description" content="Assignment to analyze design principles in other websites">
 
-      .board td:last-child {
-        border-right: 0;
-      }
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/small.css">
+    <link rel="stylesheet" href="../../css/medium.css">
+    <link rel="stylesheet" href="../../css/large.css">
+</head>
+<body>
+    <header>
+        <h1>Week 4 Notes</h1>
+        <h2>Chris Soares</h2>
+    </header>
+<main>
+    <h3> The Document Object Model</h3>
+    <p>The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled.
+</p>
+<h3>Chapter Summary</h3>
+<ul><li>The Document Object Model is a way of representing a page of HTML as a tree of nodes.</li>
+    <li>The document.getElementById() , document.getElementsByClassName() , document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.</li>
+    <li>The parentNode() , previousSibling() , nextSibling() , childNodes() and children() methods can be used to navigate around the DOM tree.</li>
+    <li>An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute() method.</li>
+    <li>The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.</li>
+    <li>Markup can be added to the page using the appendChild() and insertBefore() methods.</li>
+    <li>Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.</li>
+    <li>The innerHTML property can be used to insert raw HTML directly into the DOM.</li>
+    <li>The CSS properties of an element can be changed by accessing the style property.</li>
+</ul>
 
-      .board tr:last-child td {
-        border-bottom: 0;
-      }
+<h3>Forms</h3>
+<p>Forms are a very common method of interacting with a web page. A form is the main component of Google’s home page, and most of us use forms every day to log in to our favorite sites. In this chapter, we will look at how forms can be used to interact with a JavaScript program.
+</p>
+<ul><li>Forms are the primary method used for entering data into a browser.</li>
+<li>Forms have a variety of controls that are used for entering different types of information.</li>
+<li>HTML5 has a large number of new input types that are beginning to be implemented in modern browsers.</li>
+<li>document.forms will return an HTML collection of all the forms on a page.</li>
+<li>form.elements will return an HTML collection of all the elements contained within a form.</li>
+<li>Forms have focus , blur , and change events that fire as a user interacts with the form.</li>
+<li>Forms also have a submit event that can be used to intercept a form before it’s been submitted.</li>
+<li>The information entered into a form can be read or updated using the value property of the form controls.</li>
+<li>The HTML5 form validation API can be used to automatically validate a form, but only at a basic level, so a custom validation script may be required.</li>
+</ul>
 
-      /* Styles for the div based board */
-      .divBoard {
-        display: grid;
-        grid-template-columns: 100px 100px 100px;
-        grid-template-rows: 100px 100px 100px;
-        justify-content: center;
-      }
-      .divBoard > div {
-        /* border-right: 1px solid;
-        border-bottom: 1px solid; */
-        border: 1px solid;
-        font-size: 5em;
-        text-align: center;
-      }
-      /* .divBoard > div:nth-child(3n) {
-        border-right: 0;
-      }
-      .divBoard > div:nth-child(n + 7) {
-        border-bottom: 0;
-      } */
-    </style>
-  </head>
-  <body>
-    <!-- Here is a board built with a table element. It goes together quickly, and need minimal styling...but it will be a bit more work to get at it's children-->
-    <table class="board">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-
-    <!-- Here is a board built with simple div elements. The markup is simpler, but it will require more styling to get it to look like a tic tac toe board. All of the cells are direct children of the board, so they will be easy to get a hold of.-->
-    <div class="divBoard">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <button id="reset">Reset</button>
-
-    <script>
-      const board = document.querySelector('.board');
-      const divBoard = document.querySelector('.divBoard');
-      const resetButton = document.getElementById('reset');
-      const player1 = 'X';
-      const player2 = 'O';
-      let player = player1;
-      function addPiece(e) {
-        console.log(e.target);
-        e.target.innerHTML = player;
-        if (player === player1) player = player2;
-        else player = player1;
-      }
-      // table version
-      function resetBoard() {
-        console.dir(board);
-        for (let i = 0; i < board.rows.length; i++) {
-          let row = board.rows[i];
-          for (let j = 0; j < row.cells.length; j++) {
-            row.cells[j].innerHTML = '';
-          }
-        }
-      }
-      // div version
-      function resetBoardDiv() {
-        const divBoard = document.querySelector('.divBoard');
-        for (let i = 0; i < divBoard.children.length; i++) {
-          divBoard.children[i].innerText = '';
-        }
-        const children = Array.from(divBoard.children);
-        const empty = children.filter(function(child) {
-          return child.innerText == 'X' || child.innerText == 'O';
-        });
-        console.log(empty);
-      }
-      board.addEventListener('click', addPiece);
-      divBoard.addEventListener('click', addPiece);
-      reset.addEventListener('click', resetBoardDiv);
-    </script>
-  </body>
+<h3>OOP in JavaScript</h3>
+<p>Object-oriented programming (OOP for short) is a style of programming that involves separating the code into objects that have properties and methods. This approach has the benefit of keeping related pieces of code encapsulated in objects that maintain state throughout the life of the program. The objects can also be reused or easily modified, as required. </p>
+<ul><li>Object-oriented programming (OOP) is a way of programming that uses objects that encapsulate their own properties and methods.</li>
+<li>The main concepts of OOP are encapsulation, polymorphism and inheritance.</li>
+<li>Constructor functions can be used to create instances of objects.</li>
+<li>ES6 introduced class declarations that use the class keyword. These can be used in place of constructor functions.</li>
+<li>Inside a constructor function or class declaration, the keyword this refers to the object returned by the function.</li>
+<li>All instances of a class or constructor function inherit all the properties and methods of its prototype.</li>
+</ul>
+</main>
+<footer id="mainfoot">
+    &copy; 2021 | Chris Soares | Utah | <a href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a> <br>Last Updated: <span id="currentdate"></span>
+  </footer>
+  <script src="js/currentdate.js"></script>
+</body>
 </html>
