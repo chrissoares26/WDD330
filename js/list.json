@@ -40,6 +40,19 @@
       {
         "label": "Week 4 Practice",
         "url": "notes/week4/activity.html"
+      },
+      {
+        "label": "Week 5 Practice",
+        "url": "notes/week5/practice.html"
+      },
+      {
+        "label": "Week 5 Notes",
+        "url": "notes/week5/index.html"
+      },
+      {
+        "label": "Week 5 Team",
+        "url": "team/week5.html"
       }
+
     ]
   }
