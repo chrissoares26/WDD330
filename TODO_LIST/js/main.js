@@ -159,7 +159,7 @@ const updateScreenReaderConfirmation = (newEntryText, actionVerb) => {
 
 let controls = document.getElementById("controls");
 
-  controls.innerHTML = `${todos.length} task${
+  controls.innerHTML = `${toDoItem.length} task${
     todos.length === 1 ? "" : "s"
   } left. Filters: `;
 
