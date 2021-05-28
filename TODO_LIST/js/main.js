@@ -157,22 +157,4 @@ const updateScreenReaderConfirmation = (newEntryText, actionVerb) => {
     document.getElementById("confirmation").textContent = `${newEntryText} ${actionVerb}.`;
 };
 
-let controls = document.getElementById("controls");
-
-  controls.innerHTML = `${toDo.length} task${
-    todos.length === 1 ? "" : "s"
-  } left. Filters: `;
-
-  const filterTypes = ["All", "Incomplete", "Completed"];
-
-  filterTypes.map((type) => {
-    let newButton = document.createElement("button");
-    newButton.innerText = type;
-    newButton.setAttribute("type", "button");
-    newButton.onclick = () => setFilter(type);
-    if (filter === type) {
-      newButton.setAttribute("disabled", true);
-    }
-    controls.appendChild(newButton);
-  });
 
