@@ -98,7 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Lato";
-    /* color: white; */
+    color: white;
     /* background-image: url("https://cssanimation.rocks/demo/starwars/images/bg.jpg") */
 }
 
