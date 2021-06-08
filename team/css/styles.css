@@ -4,7 +4,7 @@ header h1 {
     text-shadow: 2px 2px 8px #FFF200;
 }
 
-@keyframes star {
+/* @keyframes star {
     0% {
         opacity: 0;
         transform: scale(1.5) translateY(-0.75em);
@@ -40,9 +40,9 @@ header h1 {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-}
+} */
 
-.wars {
+/* .wars {
     animation: wars 8s ease-out;
     display: block;
     margin-left: auto;
@@ -54,7 +54,7 @@ header h1 {
     perspective: 800px;
     transform-style: preserve3d;
     background-image: url("https://cssanimation.rocks/demo/starwars/images/bg.jpg")
-}
+} */
 
 .person {
     margin: 10px;
@@ -98,7 +98,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Lato";
-    background-image: url("https://cssanimation.rocks/demo/starwars/images/bg.jpg")
+    /* color: white; */
+    /* background-image: url("https://cssanimation.rocks/demo/starwars/images/bg.jpg") */
 }
 
 main {
