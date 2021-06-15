@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+    <meta name="description" content="Notes on Canvas and CSS3 Transforms and Transitions">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/small.css">
+    <link rel="stylesheet" href="../../css/medium.css">
+    <link rel="stylesheet" href="../../css/w8.css">
+</head>
+<body>
+    <header>
+        <h1>Week 8 Notes</h1>
+        <h2>Chris Soares</h2>
+    </header>
+<main>
+        <h4>This week's <a href="../../team/week9.html">team activity</a></h4>
+
+        <h2>BOM (or the Browser Object Model</h2>
+        <p>There is no standard for this model, but it is supported basically by just about every browser. The window object works with global variables and allows to check the values of those global variables using the window. syntax (ie. window.x == 6)</p>
+
+        <h4>Example of Window objects</h4>
+        <code>
+            alert('alert Hello');<br>
+            window.alert('Window alert Hello');<br>
+            confirm('This is a confirmation box');<br>
+            window.confirm('This is a confirmation box from the window');
+        </code>
+        <br>
+        <button id='windowObj'>Press me to see the previous code run</button>
+        <p>The code executes the same regardless of whether it was prefixed by a window or not.</p>
+
+        <h4>Windows opening windows</h4>
+        <code>const popup = window.open ('https://spyentist.github.io/WDD330/', <br>
+            'WDD 330 Portfolio' ,'width=400,height=400,resizable=yes');</code>
+        <br>
+        <button id='windowWind'>Press me to see the previous code run</button>
+
+        <h2>HTML APIs</h2>
+
+        <p>HTML 5.1 is the most current version of HTML and is going through faster updates in smaller increments to allow for easier upgrading.</p>
+        <p>With HTML 5 you can add data tags that are personalized towards a specific website and it's data. All you need is the data-* element in the HTML tags.</p>
+        <p>APIs are allowing for bigger data to be used with minimal transfer and quicker response times. For example session storage and local storage are used to cahce some data so that it is quicker to pull.</p>
+
+        
+
+    </main>
+    <footer id="mainfoot">
+        &copy; 2021 | Chris Soares | Utah | <a href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a> <br>Last Updated: <span id="currentdate"></span>
+      </footer>
+      <script src="../../js/canvas.js"></script>
+      <script src="../../js/currentdate.js"></script>
+      <script src="../../js/w9.js"></script>
+    </body>
+    </html>
