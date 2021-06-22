@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+    <meta name="description" content="Notes on Canvas and CSS3 Transforms and Transitions">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/small.css">
+    <link rel="stylesheet" href="../../css/medium.css">
+    <link rel="stylesheet" href="../../css/w8.css">
+</head>
+<body>
+    <header>
+        <h1>Week 10 Notes</h1>
+        <h2>Chris Soares</h2>
+    </header>
+<main>
+    <h1>Form Validation</h1>
+        <p>Client side form validation is used to ensure that data submitted via online forms meets the criteria of the servers requirements. Though it should not be used as the only form of security it does help the UX throuh speeding up the process of finding errors.</p>
+        <p>This basically translates to the want of certain data in a specific format. It provides protections for both the end user and the company's servers.</p>
+        <p>Some forms of validation look like:</p>        
+        <ul>
+            <li>required: this makes data forced to be entered.</li>
+            <li>minlength and maxlength: They restrict the amount of characters that can be put into a field.</li>
+            <li>min and max: These work specifically with integers whereas minlength and maxlength work with strings.</li>
+            <li>type: This requires a specific form of data to be accepted, for example, emails, phone numbers, and many more.</li>
+        </ul>
+        <p>There are also DOM API's that are accepted by most browsers to help with validation.</p>
+
+
+
+        <h1>Fetch</h1>
+        <p>This is a basic fetch statment. This first goes out to the website requesting the data available through the link. It then converts the response into a JSON format that can be modified through JavaScript. It then logs the data to the console for developer viewing. This method uses GET requests which does not offer any security.</p>
+        <code>
+            fetch('http://example.com/movies.json')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        </code>
+        <p>To add a security measure, you can use a POST method instead of a GET method.</p>
+        <code>
+            fetch('https://example.com', {
+                credentials: 'include'
+              });
+        </code>
+        <p>This is including credentials for the use in a POST request.</p>
+        <p>Fetch also allows for the pushing of data to a web service and can work with files that include, JSON, BLOB, txt, and many more.</p>
+
+</main>
+<footer id="mainfoot">
+    &copy; 2021 | Chris Soares | Utah | <a href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a> <br>Last Updated: <span id="currentdate"></span>
+  </footer>
+  <script src="../../js/canvas.js"></script>
+  <script src="../../js/currentdate.js"></script>
+  <script src="../../js/w9.js"></script>
+</body>
+</html>
